@@ -2,92 +2,991 @@
 <html lang="es">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MNCTZZL2VB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MNCTZZL2VB');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNCTZZL2VB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MNCTZZL2VB');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Julio César Galfré - Portfolio Profesional</title>
-    <link rel="shortcut icon"  type="image/x-icon" href="/img/Aleidis.png">
-
-    <link rel="stylesheet" href="/css/normalize.css">
+    <title>Julio César Galfré | Desarrollador Web Junior</title>
+    <meta name="description" content="Portafolio de Julio César Galfré - Desarrollador Web Junior. HTML, CSS, JavaScript, PHP, MySQL. En búsqueda de mi primera oportunidad en IT.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Staatliches&family=Whisper&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset y Variables */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --accent: #06b6d4;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+            --success: #22c55e;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient);
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Secciones */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sobre Mí */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-wrapper {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            background: var(--gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            box-shadow: var(--shadow-lg);
+            margin: 0 auto;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+
+        .about-highlight {
+            background: var(--gray-100);
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .about-highlight p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        /* Habilidades */
+        .skills {
+            background: var(--gray-100);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .skill-category-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: var(--gray-100);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Formación */
+        .education {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--gray-200);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 2rem;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 4rem;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 4rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 2.5rem;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -8px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -8px;
+        }
+
+        .timeline-content {
+            background: var(--gray-100);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Experiencia */
+        .experience {
+            background: var(--gray-100);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card h3 {
+            color: var(--dark);
+            font-size: 1.125rem;
+            margin: 0;
+        }
+
+        .experience-date {
+            background: var(--gray-100);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .experience-card p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .experience-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .experience-skill {
+            background: var(--gray-100);
+            padding: 0.25rem 0.625rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        /* Contacto */
+        .contact {
+            background: var(--dark);
+            color: white;
+        }
+
+        .contact .section-header h2 {
+            color: white;
+        }
+
+        .contact .section-header p {
+            color: var(--gray-300);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: white;
+        }
+
+        .contact-card p {
+            color: var(--gray-300);
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-800);
+            color: var(--gray-300);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: var(--shadow);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 4rem !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-dot {
+                left: 12px !important;
+                right: auto !important;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </head>
-
-<body class="body">
-    <div class="titulo">
-        <h1>Julio César Galfré</h1>
-        <div class="foto">
-            <img src="/img/foto.jfif" alt="Foto de Julio">
-            
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">&lt;JCG /&gt;</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        
-        <div>
-            <p><img src="/iconos/telefono.gif"alt="icono" class="icono"><strong>Teléfonos:</strong> 646 268 363</p>   
-            <p><img src="/iconos/correo.gif"alt="icono" class="icono"><strong>Email:</strong> juliogalfre77@gmail.com</p>
-            <p><img src="/iconos/calendario.gif"alt="icono" class="icono"><strong>Fecha de nacimiento:</strong> 06/04/1977</p>
-            
+    </nav>
 
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🚀 Disponible para trabajar</span>
+            <h1>Julio César Galfré</h1>
+            <p class="hero-subtitle">Desarrollador Web Junior</p>
+            <p>Profesional en transición hacia el sector IT. Con más de 15 años de experiencia técnica, ahora aplico mi disciplina, atención al detalle y capacidad de aprendizaje al desarrollo web.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-primary">
+                    📧 Contactar
+                </a>
+                <a href="#sobre-mi" class="btn btn-secondary">
+                    Conocer más
+                </a>
+            </div>
         </div>
-    </div>
+    </header>
 
-  
-  <div class="section">
-    <section id="sobre-mi">
-  <h2>Sobre mí</h2>
-  <p>Soy matricero con más de 15 años de experiencia en el sector metalúrgico, especializado en el área de automoción, donde he trabajado en procesos de estampación y fabricación de matrices para grandes marcas como Seat, Renault y Volkswagen.</p>
-  <p>A lo largo de mi carrera, he demostrado ser una persona comprometida, con una fuerte orientación al detalle y una actitud resiliente. Siempre he apostado por la formación continua y la mejora constante.</p>
-  <p>Actualmente, un cambio en mi situación personal me ha impulsado a dar un giro a mi carrera profesional. Estoy iniciando una nueva etapa en el mundo del desarrollo web y la programación, un campo que siempre me ha apasionado. Estoy formándome activamente en tecnologías como HTML, CSS, JavaScript, PHP y MySQL, con el objetivo de aplicar mi experiencia técnica en este nuevo ámbito.</p>
-</section>
-  </div>
-  <div class="section">
-    <h2>Experiencia Profesional</h2>
-    <ul>
-      <li><strong>VALTROMAP (Autónomo)</strong> | 2020 - 2022<br> Ajustador de corte fino, dobladores, conformados y embutidores. Sitio: Seat Barcelona.</li>
-      <li><strong>SOME</strong> | 2017 - 2019<br> Mantenimiento y preventivo de matrices progresivas.</li>
-      <li><strong>BISOMAT 7</strong> | 2014 - 2017<br> Ajustador de corte fino, piezas de piel vista, arranque de línea. Sitios: Seat, Autoba3 (Rusia), Renault (Francia y Palencia), Volkswagen (Pamplona).</li>
-      <li><strong>IBC Try Out</strong> | 2012 - 2014<br> Ajustador y puesta a punto en embutición. Sitios: Renault Flins (Francia), VW Wolfsburg (Alemania).</li>
-      <li><strong>Jersey Matrisería</strong> | 2011 - 2012<br> Ajustador y construcción de matrices progresivas.</li>
-      <li><strong>Locat Matrisería (Autónomo)</strong> | 2007<br> Ajustador de matrices progresivas.</li>
-      <li><strong>Metal·llics Casa Nova, S.A.</strong> | 2001 - 2004<br> Producción y ensamblaje en el sector metalúrgico.</li>
-    </ul>
-  </div>
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Mí</h2>
+                <p>Un profesional experimentado dando un nuevo rumbo a su carrera</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        👨‍💻
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>De la industria metalúrgica al mundo digital</h3>
+                    <p>Soy matricero con más de 15 años de experiencia en el sector de automoción, trabajando para marcas como <strong>Seat, Renault y Volkswagen</strong>. A lo largo de mi carrera he demostrado ser una persona comprometida, con fuerte orientación al detalle y actitud resiliente.</p>
+                    
+                    <div class="about-highlight">
+                        <p>🎯 Actualmente en formación activa en desarrollo web, buscando mi primera oportunidad laboral en el sector IT.</p>
+                    </div>
+                    
+                    <p>Un cambio en mi situación personal me impulsó a dar un giro a mi carrera profesional hacia el desarrollo web y la programación, un campo que siempre me ha apasionado.</p>
+                    <p>Estoy formándome en tecnologías como <strong>HTML, CSS, JavaScript, PHP y MySQL</strong>, además de fundamentos de redes con la certificación <strong>Cisco CCNA</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="section">
-    <h2>Formación</h2>
-    <ul>
-      <li><strong>ESO</strong> – Instituto Paula Albarracin de Sarmiento (1991)</li>
-      <li><strong>Creación y Gestión de Empresa</strong> – Centre d’Iniciatives Empresarials del Metall (2004)</li>
-      <li><strong>Soldador (TIG, MIG, electrodo)</strong> – S.O.C (2009)</li>
-      <li><strong>Curso en desarrollo web</strong> – HTML, CSS, SASS, JavaScript, PHP, MySQL, SQL, API's (En formación 2025)</li>
-      <li><strong>Cisco CCNA Fundamentos de Redes IP</strong> (En formación 2025)</li>
-    </ul>
-  </div>
+    <!-- Habilidades -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Habilidades Técnicas</h2>
+                <p>Tecnologías que estoy aprendiendo y dominando</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>
+                        <span class="skill-category-icon">🎨</span>
+                        Frontend
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">SASS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="skill-category-icon">⚙️</span>
+                        Backend
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">API's REST</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="skill-category-icon">🛠️</span>
+                        Herramientas
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Terminal</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="skill-category-icon">🌐</span>
+                        Redes
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cisco CCNA</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">Fundamentos de redes</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="skill-category-icon">💡</span>
+                        Soft Skills
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Resolución de problemas</span>
+                        <span class="skill-tag">Atención al detalle</span>
+                        <span class="skill-tag">Trabajo en equipo</span>
+                        <span class="skill-tag">Aprendizaje continuo</span>
+                        <span class="skill-tag">Disciplina</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <span class="skill-category-icon">🗣️</span>
+                        Idiomas
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Castellano (Nativo)</span>
+                        <span class="skill-tag">Catalán (Elemental)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="section">
-    <h2>Idiomas</h2>
-    <ul>
-      <li><strong>Castellano:</strong> Nativo (hablado y escrito)</li>
-      <li><strong>Catalán:</strong> Nivel elemental (hablado y escrito)</li>
-    </ul>
-  </div>
+    <!-- Formación -->
+    <section id="formacion" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Formación</h2>
+                <p>Mi camino de aprendizaje hacia el desarrollo web</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025 - Actualidad</span>
+                        <h4>Desarrollo Web Full Stack</h4>
+                        <p>HTML, CSS, SASS, JavaScript, PHP, MySQL, SQL, API's. Formación intensiva con proyectos prácticos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025 - Actualidad</span>
+                        <h4>Cisco CCNA - Fundamentos de Redes IP</h4>
+                        <p>Certificación en redes, protocolos TCP/IP, configuración de equipos de red.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2009</span>
+                        <h4>Soldador TIG, MIG, Electrodo</h4>
+                        <p>S.O.C - Formación técnica especializada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2004</span>
+                        <h4>Creación y Gestión de Empresa</h4>
+                        <p>Centre d'Iniciatives Empresarials del Metall - Emprendimiento y gestión empresarial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
- 
+    <!-- Experiencia -->
+    <section id="experiencia" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experiencia Profesional</h2>
+                <p>Más de 15 años desarrollando habilidades transferibles al sector IT</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>VALTROMAP (Autónomo)</h3>
+                        <span class="experience-date">2020 - 2022</span>
+                    </div>
+                    <p>Ajustador de corte fino, dobladores, conformados y embutidores para Seat Barcelona.</p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Precisión técnica</span>
+                        <span class="experience-skill">Autonomía</span>
+                        <span class="experience-skill">Control de calidad</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>SOME</h3>
+                        <span class="experience-date">2017 - 2019</span>
+                    </div>
+                    <p>Mantenimiento y preventivo de matrices progresivas.</p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Mantenimiento</span>
+                        <span class="experience-skill">Diagnóstico</span>
+                        <span class="experience-skill">Prevención</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>BISOMAT 7</h3>
+                        <span class="experience-date">2014 - 2017</span>
+                    </div>
+                    <p>Ajustador de corte fino y piezas de piel vista. Proyectos internacionales: Seat, Renault (Francia), Volkswagen (Pamplona).</p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Proyectos internacionales</span>
+                        <span class="experience-skill">Alta precisión</span>
+                        <span class="experience-skill">Adaptabilidad</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>IBC Try Out</h3>
+                        <span class="experience-date">2012 - 2014</span>
+                    </div>
+                    <p>Ajustador y puesta a punto en embutición. Proyectos en Renault Flins (Francia) y VW Wolfsburg (Alemania).</p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Trabajo internacional</span>
+                        <span class="experience-skill">Resolución de problemas</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Jersey Matrisería</h3>
+                        <span class="experience-date">2011 - 2012</span>
+                    </div>
+                    <p>Ajustador y construcción de matrices progresivas.</p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Construcción</span>
+                        <span class="experience-skill">Trabajo en equipo</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Metal·llics Casa Nova, S.A.</h3>
+                        <span class="experience-date">2001 - 2004</span>
+                    </div>
+                    <p>Producción y ensamblaje en el sector metalúrgico.</p>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Producción</span>
+                        <span class="experience-skill">Ensamblaje</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="section">
-    <h2>Permiso de Conducir</h2>
-    <p>Categorías A y B</p>
-  </div>
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Hablamos?</h2>
+                <p>Estoy buscando mi primera oportunidad como desarrollador web junior. ¡Contacta conmigo!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:juliogalfre77@gmail.com">juliogalfre77@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Teléfono</h3>
+                    <a href="tel:+34646268363">646 268 363</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/Galfre77" target="_blank" rel="noopener noreferrer">github.com/Galfre77</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Ubicación</h3>
+                    <p>Barcelona, España</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Julio César Galfré. Desarrollado con 💙 HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script>
+        // Menú hamburguesa para móvil
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Smooth scroll para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
