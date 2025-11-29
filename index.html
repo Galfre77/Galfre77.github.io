@@ -103,6 +103,9 @@
             flex-direction: column;
             cursor: pointer;
             gap: 4px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
         }
 
         .hamburger span {
@@ -654,7 +657,7 @@
     <!-- Navegación -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">&lt;JCG /&gt;</a>
+            <a href="#hero" class="nav-logo">&lt;JCG /&gt;</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
@@ -662,16 +665,16 @@
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
+            <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header id="hero" class="hero">
         <div class="hero-content">
             <span class="hero-badge">🚀 Disponible para trabajar</span>
             <h1>Julio César Galfré</h1>
@@ -746,7 +749,7 @@
                         <span class="skill-tag">PHP</span>
                         <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">API's REST</span>
+                        <span class="skill-tag">APIs REST</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -963,14 +966,20 @@
 
     <script>
         // Menú hamburguesa para móvil
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburgerBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
 
         // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
             });
         });
 
