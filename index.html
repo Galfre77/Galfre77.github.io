@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio personal de desarrollador web junior. En busca de mi primera oportunidad laboral en el sector IT.">
-    <title>Mi Portafolio | Desarrollador Web Junior</title>
+    <meta name="description" content="Portafolio de Julio César Galfré, desarrollador web junior en transición desde el sector metalúrgico hacia el desarrollo web.">
+    <title>Julio César Galfré | Desarrollador Web Junior</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,14 @@
     <!-- Header / Navegación -->
     <header class="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Mi Portafolio</a>
+            <a href="#inicio" class="nav__logo">Julio C. Galfré</a>
             <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
                 <span class="nav__toggle-icon"></span>
             </button>
             <ul class="nav__menu" id="nav-menu">
                 <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
                 <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+                <li class="nav__item"><a href="#experiencia" class="nav__link">Experiencia</a></li>
                 <li class="nav__item"><a href="#formacion" class="nav__link">Formación</a></li>
                 <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
                 <li class="nav__item"><a href="#proyectos" class="nav__link">Proyectos</a></li>
@@ -35,11 +36,11 @@
             <div class="container hero__content">
                 <div class="hero__text">
                     <p class="hero__greeting">¡Hola! 👋 Soy</p>
-                    <h1 class="hero__title">Desarrollador Web Junior</h1>
+                    <h1 class="hero__title">Julio César Galfré</h1>
                     <p class="hero__description">
-                        Apasionado por la tecnología y en constante aprendizaje. 
-                        Busco mi primera oportunidad laboral en el sector IT para 
-                        crecer profesionalmente y aportar valor desde el primer día.
+                        Desarrollador web junior en transición desde el sector metalúrgico, 
+                        con más de 15 años de experiencia como matricero en automoción 
+                        y una fuerte apuesta por la formación continua en programación.
                     </p>
                     <div class="hero__buttons">
                         <a href="#contacto" class="btn btn--primary">Contáctame</a>
@@ -48,6 +49,7 @@
                 </div>
                 <div class="hero__image">
                     <div class="hero__avatar">
+                        <!-- Aquí podrías sustituir el emoji por tu foto con CSS -->
                         <span class="hero__avatar-icon">👨‍💻</span>
                     </div>
                 </div>
@@ -61,29 +63,37 @@
                 <div class="about__content">
                     <div class="about__info">
                         <p>
-                            Soy una persona motivada y con gran interés por el mundo del desarrollo web. 
-                            Hace poco tiempo comencé mi formación en programación, y desde entonces no he 
-                            dejado de aprender y mejorar mis habilidades.
+                            Soy matricero con más de 15 años de experiencia en el sector metalúrgico, 
+                            especializado en el área de automoción, donde he trabajado en procesos de 
+                            estampación y fabricación de matrices para grandes marcas como Seat, 
+                            Renault y Volkswagen.
                         </p>
                         <p>
-                            Mi objetivo es encontrar mi primera oportunidad laboral como desarrollador web junior, 
-                            donde pueda aplicar mis conocimientos, seguir formándome y contribuir al éxito de 
-                            proyectos reales. Me caracterizo por ser responsable, proactivo y tener muchas 
-                            ganas de aprender.
+                            A lo largo de mi carrera he demostrado compromiso, orientación al detalle 
+                            y una actitud resiliente. Siempre he apostado por la formación continua 
+                            y la mejora constante.
                         </p>
                         <p>
-                            Actualmente continúo ampliando mis conocimientos en tecnologías web mientras 
-                            busco esa primera oportunidad que me permita demostrar mi potencial.
+                            Actualmente, un cambio en mi situación personal me ha impulsado a dar un giro 
+                            a mi carrera profesional. Estoy iniciando una nueva etapa en el mundo del 
+                            desarrollo web y la programación, un campo que siempre me ha apasionado. 
+                            Me estoy formando activamente en tecnologías como HTML, CSS, JavaScript, PHP y 
+                            MySQL, con el objetivo de aplicar mi experiencia técnica en este nuevo ámbito.
+                        </p>
+                        <p>
+                            Busco mi primera oportunidad laboral como desarrollador web junior, donde pueda 
+                            aplicar mis conocimientos, seguir formándome y contribuir al éxito de proyectos 
+                            reales. Me considero una persona responsable, proactiva y con muchas ganas de aprender.
                         </p>
                     </div>
                     <div class="about__stats">
                         <div class="stat">
-                            <span class="stat__number">2</span>
-                            <span class="stat__text">Cursos completados</span>
+                            <span class="stat__number">15+</span>
+                            <span class="stat__text">Años de experiencia industrial</span>
                         </div>
                         <div class="stat">
-                            <span class="stat__number">+100</span>
-                            <span class="stat__text">Horas de práctica</span>
+                            <span class="stat__number">2</span>
+                            <span class="stat__text">Formaciones IT en curso</span>
                         </div>
                         <div class="stat">
                             <span class="stat__number">∞</span>
@@ -94,38 +104,97 @@
             </div>
         </section>
 
-        <!-- Sección Formación -->
-        <section id="formacion" class="education section section--alt">
+        <!-- NUEVA Sección Experiencia Profesional (del CV) -->
+        <section id="experiencia" class="experience section section--alt">
+            <div class="container">
+                <h2 class="section__title">Experiencia Profesional</h2>
+                <ul class="experience__list">
+                    <li class="experience__item">
+                        <h3 class="experience__role">Ajustador de corte fino, dobladores, conformados y embutidores</h3>
+                        <p class="experience__company"><strong>VALTROMAP (Autónomo)</strong> | 2020 - 2022</p>
+                        <p class="experience__details">Trabajo en matrices y ajuste de herramientas en Seat Barcelona.</p>
+                    </li>
+                    <li class="experience__item">
+                        <h3 class="experience__role">Mantenimiento y preventivo de matrices progresivas</h3>
+                        <p class="experience__company"><strong>SOME</strong> | 2017 - 2019</p>
+                    </li>
+                    <li class="experience__item">
+                        <h3 class="experience__role">Ajustador de corte fino y arranque de línea</h3>
+                        <p class="experience__company"><strong>BISOMAT 7</strong> | 2014 - 2017</p>
+                        <p class="experience__details">
+                            Piezas de piel vista y arranque de línea en Seat, Autoba3 (Rusia), Renault (Francia y Palencia), 
+                            Volkswagen (Pamplona).
+                        </p>
+                    </li>
+                    <li class="experience__item">
+                        <h3 class="experience__role">Ajustador y puesta a punto en embutición</h3>
+                        <p class="experience__company"><strong>IBC Try Out</strong> | 2012 - 2014</p>
+                        <p class="experience__details">
+                            Trabajos en Renault Flins (Francia) y VW Wolfsburg (Alemania).
+                        </p>
+                    </li>
+                    <li class="experience__item">
+                        <h3 class="experience__role">Ajustador y construcción de matrices progresivas</h3>
+                        <p class="experience__company"><strong>Jersey Matrisería</strong> | 2011 - 2012</p>
+                    </li>
+                    <li class="experience__item">
+                        <h3 class="experience__role">Ajustador de matrices progresivas</h3>
+                        <p class="experience__company"><strong>Locat Matrisería (Autónomo)</strong> | 2007</p>
+                    </li>
+                    <li class="experience__item">
+                        <h3 class="experience__role">Producción y ensamblaje</h3>
+                        <p class="experience__company"><strong>Metal·llics Casa Nova, S.A.</strong> | 2001 - 2004</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección Formación (adaptada al CV) -->
+        <section id="formacion" class="education section">
             <div class="container">
                 <h2 class="section__title">Formación</h2>
                 <div class="education__grid">
                     <article class="education__card">
-                        <div class="education__icon">📚</div>
-                        <h3 class="education__title">Fundamentos de Programación y Redes</h3>
+                        <div class="education__icon">💻</div>
+                        <h3 class="education__title">Curso en Desarrollo Web (En formación 2025)</h3>
                         <p class="education__description">
-                            Curso completo donde aprendí los conceptos básicos de programación, 
-                            lógica computacional, estructuras de datos y fundamentos de redes 
-                            informáticas.
+                            Formación orientada al desarrollo web con foco en backend y bases de datos, 
+                            aplicando buenas prácticas y desarrollo de aplicaciones dinámicas.
                         </p>
                         <ul class="education__topics">
-                            <li>Lógica de programación</li>
-                            <li>Estructuras de control</li>
-                            <li>Fundamentos de redes</li>
-                            <li>Resolución de problemas</li>
+                            <li>HTML, CSS, SASS</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>MySQL y SQL</li>
+                            <li>Consumo y creación de API's</li>
                         </ul>
                     </article>
+
                     <article class="education__card">
-                        <div class="education__icon">🐘</div>
-                        <h3 class="education__title">Curso Avanzado de PHP</h3>
+                        <div class="education__icon">📡</div>
+                        <h3 class="education__title">Cisco CCNA Fundamentos de Redes IP (En formación 2025)</h3>
                         <p class="education__description">
-                            Formación especializada en PHP donde profundicé en el desarrollo 
-                            backend, conexión con bases de datos y creación de aplicaciones web dinámicas.
+                            Fundamentos de redes, protocolos, direccionamiento IP y configuración básica de equipos 
+                            de red, aportando una base sólida en infraestructura y comunicaciones.
                         </p>
                         <ul class="education__topics">
-                            <li>PHP orientado a objetos</li>
-                            <li>MySQL y bases de datos</li>
-                            <li>Desarrollo de APIs</li>
-                            <li>Buenas prácticas de código</li>
+                            <li>Fundamentos de redes</li>
+                            <li>Direcciones IP y subredes</li>
+                            <li>Enrutamiento básico</li>
+                        </ul>
+                    </article>
+
+                    <article class="education__card">
+                        <div class="education__icon">🎓</div>
+                        <h3 class="education__title">Otra Formación</h3>
+                        <p class="education__description">
+                            Formación previa en educación secundaria, emprendimiento y soldadura, 
+                            que refuerza mi perfil técnico y mi capacidad de adaptación.
+                        </p>
+                        <ul class="education__topics">
+                            <li><strong>ESO</strong> – Instituto Paula Albarracín de Sarmiento (1991)</li>
+                            <li><strong>Creación y Gestión de Empresa</strong> – Centre d’Iniciatives Empresarials del Metall (2004)</li>
+                            <li><strong>Soldador (TIG, MIG, electrodo)</strong> – S.O.C (2009)</li>
                         </ul>
                     </article>
                 </div>
@@ -133,7 +202,7 @@
         </section>
 
         <!-- Sección Habilidades -->
-        <section id="habilidades" class="skills section">
+        <section id="habilidades" class="skills section section--alt">
             <div class="container">
                 <h2 class="section__title">Habilidades Técnicas</h2>
                 <div class="skills__grid">
@@ -144,17 +213,22 @@
                     </div>
                     <div class="skill">
                         <div class="skill__icon">🎨</div>
-                        <h3 class="skill__name">CSS3</h3>
+                        <h3 class="skill__name">CSS3 / SASS</h3>
+                        <p class="skill__level">Fundamentos</p>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__icon">⚙️</div>
+                        <h3 class="skill__name">JavaScript</h3>
                         <p class="skill__level">Fundamentos</p>
                     </div>
                     <div class="skill">
                         <div class="skill__icon">🐘</div>
-                        <h3 class="skill__name">PHP</h3>
-                        <p class="skill__level">Intermedio</p>
+                        <h3 class="skill__name">PHP / Laravel</h3>
+                        <p class="skill__level">Intermedio (en formación)</p>
                     </div>
                     <div class="skill">
                         <div class="skill__icon">🗄️</div>
-                        <h3 class="skill__name">MySQL</h3>
+                        <h3 class="skill__name">MySQL / SQL</h3>
                         <p class="skill__level">Fundamentos</p>
                     </div>
                     <div class="skill">
@@ -168,6 +242,7 @@
                         <p class="skill__level">Aprendiendo</p>
                     </div>
                 </div>
+
                 <div class="skills__soft">
                     <h3 class="skills__subtitle">Habilidades Blandas</h3>
                     <div class="soft-skills">
@@ -177,13 +252,27 @@
                         <span class="soft-skill">Responsabilidad</span>
                         <span class="soft-skill">Comunicación</span>
                         <span class="soft-skill">Proactividad</span>
+                        <span class="soft-skill">Orientación al detalle</span>
                     </div>
+                </div>
+
+                <!-- Extra: Idiomas y otros datos del CV -->
+                <div class="skills__extra">
+                    <h3 class="skills__subtitle">Idiomas</h3>
+                    <ul class="skills__languages">
+                        <li><strong>Castellano:</strong> Nativo (hablado y escrito)</li>
+                        <li><strong>Catalán:</strong> Nivel elemental (hablado y escrito)</li>
+                    </ul>
+
+                    <h3 class="skills__subtitle">Otros datos</h3>
+                    <p>Permiso de conducir categorías <strong>A y B</strong>.</p>
+                    <p>Fecha de nacimiento: <strong>06/04/1977</strong>.</p>
                 </div>
             </div>
         </section>
 
         <!-- Sección Proyectos -->
-        <section id="proyectos" class="projects section section--alt">
+        <section id="proyectos" class="projects section">
             <div class="container">
                 <h2 class="section__title">Proyectos</h2>
                 <p class="projects__intro">
@@ -199,7 +288,8 @@
                         <div class="project__content">
                           <h3 class="project__title">Gestor de Películas</h3>
                           <p class="project__description">
-                            Actividad del curso:Aplicación web para administrar un catálogo de películas: agregar, editar, eliminar y listar títulos. Incluye validación y búsqueda.
+                            Actividad del curso: Aplicación web para administrar un catálogo de películas: 
+                            agregar, editar, eliminar y listar títulos. Incluye validación y búsqueda.
                           </p>
                           <div class="project__tags">
                             <span class="tag">PHP</span>
@@ -218,7 +308,9 @@
                         <div class="project__content">
                           <h3 class="project__title">Sistema de Gestión Hospitalaria</h3>
                           <p class="project__description">
-                            Actividad del curso: Aplicación web para registrar pacientes, gestionar usuarios y realizar operaciones CRUD. Incluye validación y control de acceso.
+                            Actividad del curso: Aplicación web para registrar pacientes, 
+                            gestionar usuarios y realizar operaciones CRUD. Incluye validación 
+                            y control de acceso.
                           </p>
                           <div class="project__tags">
                             <span class="tag">PHP</span>
@@ -228,6 +320,7 @@
                         </div>
                       </article>
                     </a>
+
                     <a href="https://github.com/Galfre77/Agencia-de-viaje" target="_blank" rel="noopener noreferrer">
                       <article class="project">
                         <div class="project__image">
@@ -236,7 +329,8 @@
                         <div class="project__content">
                           <h3 class="project__title">Sistema de Agencia de Viajes</h3>
                           <p class="project__description">
-                            Actividad del curso: aplicación web para gestionar destinos, reservas de una agencia de viajes.
+                            Actividad del curso: Aplicación web para gestionar destinos 
+                            y reservas de una agencia de viajes.
                           </p>
                           <div class="project__tags">
                             <span class="tag">PHP</span>
@@ -247,7 +341,7 @@
                       </article>
                     </a>
 
-                   <a href="https://github.com/Galfre77/CRUD_PHP" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Galfre77/CRUD_PHP" target="_blank" rel="noopener noreferrer">
                       <article class="project">
                         <div class="project__image">
                           <span class="project__emoji">🏦</span>
@@ -255,7 +349,8 @@
                         <div class="project__content">
                           <h3 class="project__title">Sistema Bancario CRUD</h3>
                           <p class="project__description">
-                            Actividad del curso: aplicación en PHP para gestionar clientes. Permite crear, editar y eliminar registros con validaciones.
+                            Actividad del curso: Aplicación en PHP para gestionar clientes. 
+                            Permite crear, editar y eliminar registros con validaciones.
                           </p>
                           <div class="project__tags">
                             <span class="tag">PHP</span>
@@ -272,17 +367,15 @@
                         <div class="project__content">
                           <h3 class="project__title">Sistema de Gestión de Idiomas</h3>
                           <p class="project__description">
-                            Actividad del curso: Plataforma educativa para administrar cursos y alumnos en la incorporación de un segundo idioma. 
+                            Actividad del curso: Plataforma educativa para administrar cursos y 
+                            alumnos en la incorporación de un segundo idioma.
                           </p>
                           <div class="project__tags">
                             <span class="tag">PHP</span>
-                            
                           </div>
                         </div>
                       </article>
                     </a>
-
-
 
                     <article class="project">
                         <div class="project__image">
@@ -291,7 +384,7 @@
                         <div class="project__content">
                             <h3 class="project__title">Portafolio Personal</h3>
                             <p class="project__description">
-                                Esta misma web que estás viendo. Diseñada con IA, 
+                                Esta misma web que estás viendo. Diseñada con apoyo de IA, 
                                 completamente responsive y con buenas prácticas de accesibilidad.
                             </p>
                             <div class="project__tags">
@@ -301,6 +394,7 @@
                             </div>
                         </div>
                     </article>
+
                     <article class="project project--coming">
                         <div class="project__image">
                             <span class="project__emoji">🚀</span>
@@ -320,13 +414,13 @@
             </div>
         </section>
 
-        <!-- Sección Contacto -->
-        <section id="contacto" class="contact section">
+        <!-- Sección Contacto (con datos reales del CV) -->
+        <section id="contacto" class="contact section section--alt">
             <div class="container">
                 <h2 class="section__title">Contacto</h2>
                 <p class="contact__intro">
-                    ¿Interesado en mi perfil? ¡Me encantaría saber de ti! 
-                    Estoy abierto a oportunidades laborales y colaboraciones.
+                    ¿Interesado en mi perfil? Me encantaría saber de ti. 
+                    Estoy abierto a oportunidades laborales y colaboraciones en el ámbito del desarrollo web.
                 </p>
                 <div class="contact__content">
                     <div class="contact__info">
@@ -334,14 +428,23 @@
                             <span class="contact__icon">📧</span>
                             <div class="contact__details">
                                 <h3>Email</h3>
-                                <p>tu-email@ejemplo.com</p>
+                                <p>juliogalfre77@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon">📱</span>
+                            <div class="contact__details">
+                                <h3>Teléfono</h3>
+                                <p>646 268 363</p>
                             </div>
                         </div>
                         <div class="contact__item">
                             <span class="contact__icon">💼</span>
                             <div class="contact__details">
                                 <h3>LinkedIn</h3>
-                                <p>linkedin.com/in/tu-perfil</p>
+                                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
+                                <p>linkedin</p>
+                                </a>
                             </div>
                         </div>
                         <div class="contact__item">
@@ -354,7 +457,7 @@
                     </div>
                     <div class="contact__cta">
                         <p>¿Listo para conectar?</p>
-                        <a href="mailto:tu-email@ejemplo.com" class="btn btn--primary btn--large">
+                        <a href="mailto:juliogalfre77@gmail.com" class="btn btn--primary btn--large">
                             Envíame un mensaje
                         </a>
                     </div>
@@ -366,7 +469,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Mi Portafolio | Desarrollador Web Junior</p>
+            <p>&copy; 2024 Julio César Galfré | Desarrollador Web Junior</p>
             <p class="footer__subtitle">En busca de mi primera oportunidad laboral 🚀</p>
         </div>
     </footer>
